@@ -1,0 +1,47 @@
+---
+title: "Meal_prep"
+author: "Silvia Justi"
+date: "1/22/2018"
+output: pdf_document
+---
+## Chosing the ingredients for the salad. I like to have all food groups
+```{r, tidy =T}
+carb <- c("pasta", "corn", "potato")
+fat <- c("avocado", "almond", "olive")
+legume<- c("peas","chickpeas", "soy")
+protein <- c("beef", "chicken", "eggs")
+veggies <- c("tomato", "carrots", "celery")
+leaves <- c("arugula", "springmix")
+dressing <- c("ranch", "honeymustard", "soysauce")
+```
+
+## Making one salad a day for the week...
+```{r, tidy =T}
+Mon <- c((sample(carb, 1, replace = T)),(sample(fat, 1, replace = T)),
+            (sample(legume, 1, replace = T)),(sample(protein, 1, replace = T)),
+            (sample(veggies, 1, replace = T)),(sample(leaves, 1, replace = T)),
+              (sample(dressing, 1, replace = T)))
+Tue <- c((sample(carb, 1, replace = T)),(sample(fat, 1, replace = T)),
+            (sample(legume, 1, replace = T)),(sample(protein, 1, replace = T)),
+            (sample(veggies, 1, replace = T)),(sample(leaves, 1, replace = T)),
+            (sample(dressing, 1, replace = T)))           
+Wed <- c((sample(carb, 1, replace = T)),(sample(fat, 1, replace = T)),
+            (sample(legume, 1, replace = T)),(sample(protein, 1, replace = T)),
+            (sample(veggies, 1, replace = T)),(sample(leaves, 1, replace = T)),
+            (sample(dressing, 1, replace = T)))
+Thu <- c((sample(carb, 1, replace = T)),(sample(fat, 1, replace = T)),
+            (sample(legume, 1, replace = T)),(sample(protein, 1, replace = T)),
+            (sample(veggies, 1, replace = T)),(sample(leaves, 1, replace = T)),
+            (sample(dressing, 1, replace = T)))
+Fri <- c((sample(carb, 1, replace = T)),(sample(fat, 1, replace = T)),
+            (sample(legume, 1, replace = T)),(sample(protein, 1, replace = T)),
+            (sample(veggies, 1, replace = T)),(sample(leaves, 1, replace = T)),
+            (sample(dressing, 1, replace = T)))
+```
+
+## Creating the grocery list...
+```{r, tidy =T}
+grocery <- sort(c(Mon, Tue, Wed, Thu, Fri))
+summary(as.data.frame(grocery),maxsum = 21)
+
+```
