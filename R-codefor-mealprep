@@ -39,9 +39,32 @@ Fri <- c((sample(carb, 1, replace = T)),(sample(fat, 1, replace = T)),
             (sample(dressing, 1, replace = T)))
 ```
 
+```{r, tidy =T}
+Mon
+```
+```{r, tidy =T}
+Tue
+```
+
+```{r, tidy =T}
+Wed
+```
+
+```{r, tidy =T}
+Thu
+```
+
+```{r, tidy =T}
+Fri
+```   
+
 ## Creating the grocery list...
 ```{r, tidy =T}
 grocery <- sort(c(Mon, Tue, Wed, Thu, Fri))
 summary(as.data.frame(grocery),maxsum = 21)
 
 ```
+
+
+
+
